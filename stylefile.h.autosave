@@ -1,5 +1,5 @@
-#ifndef GEOFILE_H
-#define GEOFILE_H
+#ifndef STYLEFILE_H
+#define STYLEFILE_H
 #include <QString>
 #include <QFile>
 #include <QTextStream>
@@ -8,13 +8,13 @@
 #include "map.h"
 #include "layer.h"
 
-class GeoFile
+class StyleFile
 {
 public:
-    GeoFile();
+    StyleFile();
     Map map;
 
-    void LoadFile(QString filePath);
+    void LoadStyle(QString filePath);
 };
 
-#endif // GEOFILE_H
+#endif // STYLEFILE_H

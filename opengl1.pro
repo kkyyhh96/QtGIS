@@ -31,7 +31,8 @@ SOURCES += \
     map.cpp \
     geofile.cpp \
     point.cpp \
-    feature.cpp
+    feature.cpp \
+    stylefile.cpp
 
 HEADERS += \
         widget.h \
@@ -40,7 +41,8 @@ HEADERS += \
     map.h \
     geofile.h \
     point.h \
-    feature.h
+    feature.h \
+    stylefile.h
 
 FORMS += \
         widget.ui

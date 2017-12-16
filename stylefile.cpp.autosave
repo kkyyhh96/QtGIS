@@ -1,16 +1,15 @@
-#include "geofile.h"
+#include "stylefile.h"
 
-GeoFile::GeoFile()
+StyleFile::StyleFile()
 {
 
 }
 
-void GeoFile::LoadFile(QString filePath){
+void StyleFile::LoadStyle(QString filePath){
     QFile file(filePath);
     file.open(QIODevice::ReadOnly);
     QTextStream textStream(&file);
 
     map.LoadMap(&textStream);
-
     file.close();
 }

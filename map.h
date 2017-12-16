@@ -10,11 +10,9 @@ public:
     Map();
     double left,top,right,bottom;
     int layerCount;
-    Layer LoadMap(QTextStream *textStream);
     Layer LAYER;
+    void LoadMap(QTextStream *textStream);
     std::vector<Layer> LAYERS;
-
-    std::vector<Layer> layers;
 };
 
 #endif // MAP_H

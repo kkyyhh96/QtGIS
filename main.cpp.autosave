@@ -2,6 +2,7 @@
 #include "mywidget.h"
 #include <QApplication>
 #include "geofile.h"
+#include "stylefile.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +14,9 @@ int main(int argc, char *argv[])
     GeoFile geoFile;
     geoFile.LoadFile("/home/kyh/Documents/Qt/practise_3/utf8/china.dat");
 
+    StyleFile styleFile;
+    styleFile.map
+    styleFile.LoadStyle("/home/kyh/Documents/Qt/practise_3/utf8/china.opt");
 
     // Map Show
     MyWidget myWidget;

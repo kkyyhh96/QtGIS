@@ -4,7 +4,7 @@ Map::Map()
 {
 }
 
-Layer Map::LoadMap(QTextStream *textStream){
+void Map::LoadMap(QTextStream *textStream){
     QString line1 = textStream->readLine();
     QString line2 = textStream->readLine();
     QString line3 = textStream->readLine();
@@ -25,15 +25,11 @@ Layer Map::LoadMap(QTextStream *textStream){
     c=line3.toDouble();
     this->layerCount=c;
 
-
     for(int i=0;i<layerCount;i++){
         Layer layer;
         layer.LoadLayer(textStream);
         LAYER=layer;
         LAYERS.push_back(LAYER);
-        if(i==layerCount-1){
-        return layer;
-        }
     }
 
     /*
