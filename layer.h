@@ -13,8 +13,9 @@ public:
     QString layer_name;
     int target_count;
     void LoadLayer(QTextStream* textStream);
+    void DrawLayer();
 
-   std::vector<Feature> *features;
+    std::vector<Feature> features;
 };
 
 #endif // LAYER_H

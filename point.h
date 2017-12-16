@@ -9,6 +9,7 @@ public:
     Point();
     double x,y;
     bool LoadPoint(QTextStream* textStream,Point* pt);
+    void DrawPoint();
 };
 
 #endif // POINT_H

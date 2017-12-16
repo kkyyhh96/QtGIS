@@ -2,10 +2,9 @@
 
 Map::Map()
 {
-
 }
 
-void Map::LoadMap(QTextStream *textStream){
+Layer Map::LoadMap(QTextStream *textStream){
     QString line1 = textStream->readLine();
     QString line2 = textStream->readLine();
     QString line3 = textStream->readLine();
@@ -26,11 +25,15 @@ void Map::LoadMap(QTextStream *textStream){
     c=line3.toDouble();
     this->layerCount=c;
 
-    for(int i=0;i<layerCount;i++){
+    Layer *layer;
+    Layer lay;
+    //for(int i=0;i<layerCount;i++){
+    for(int i=0;i<1;i++){
         //Load Layers
-        Layer l;
-        Layer *layer=&l;
+        layer=&lay;
         layer->LoadLayer(textStream);
-        this->Layers->push_back(*layer);
+        //layers.push_back(*layer);
+        //layers.push_back(l);
+        return lay;
     }
 }

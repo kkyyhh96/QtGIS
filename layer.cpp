@@ -2,7 +2,9 @@
 
 Layer::Layer()
 {
-
+    layer_name="";
+    layer_name_size=0;
+    target_count=0;
 }
 
 void Layer::LoadLayer(QTextStream *textStream){
@@ -14,14 +16,19 @@ void Layer::LoadLayer(QTextStream *textStream){
     s=line1.toInt();
     layer_name_size=s;
     n=line2.split('\n')[0];
-    this->layer_name=n;
+    layer_name=n;
     c=line3.toInt();
-    this->target_count=c;
+    target_count=c;
 
+    Feature *feature;
     for(int i=0;i<target_count;i++){
         Feature f;
-        Feature *feature=&f;
+        feature=&f;
         feature->LoadFeature(textStream);
-        this->features->push_back(*feature);
+        this->features.push_back(*feature);
     }
+}
+
+void Layer::DrawLayer(){
+
 }

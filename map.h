@@ -1,8 +1,8 @@
 #ifndef MAP_H
 #define MAP_H
-#include "layer.h"
 #include <vector>
 #include <QTextStream>
+#include "layer.h"
 
 class Map
 {
@@ -10,9 +10,9 @@ public:
     Map();
     double left,top,right,bottom;
     int layerCount;
-    void LoadMap(QTextStream *textStream);
+    Layer LoadMap(QTextStream *textStream);
 
-    std::vector <Layer> *Layers;
+    //std::vector<Layer> layers;
 };
 
 #endif // MAP_H

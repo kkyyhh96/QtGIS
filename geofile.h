@@ -6,16 +6,16 @@
 #include <fstream>
 #include <iostream>
 #include "map.h"
+#include "layer.h"
 
 class GeoFile
 {
 public:
     GeoFile();
     Map *map;
+    Layer layer;
 
     void LoadFile(QString filePath);
-
-    //void LoadMapInfo(QTextStream* textStream);
 };
 
 #endif // GEOFILE_H

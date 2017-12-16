@@ -17,3 +17,7 @@ bool Point::LoadPoint(QTextStream *textStream,Point *pt){
     }
     return true;
 }
+
+void Point::DrawPoint(){
+
+}

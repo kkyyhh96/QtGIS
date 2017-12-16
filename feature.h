@@ -11,8 +11,9 @@ public:
     Feature();
     int feature_type;
     void LoadFeature(QTextStream *textStream);
+    void DrawFeature();
 
-    std::vector<Point> *pts;
+    std::vector<Point> pts;
 };
 
 #endif // FEATURE_H
