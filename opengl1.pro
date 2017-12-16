@@ -32,7 +32,9 @@ SOURCES += \
     geofile.cpp \
     point.cpp \
     feature.cpp \
-    stylefile.cpp
+    stylefile.cpp \
+    style.cpp \
+    color.cpp
 
 HEADERS += \
         widget.h \
@@ -42,7 +44,9 @@ HEADERS += \
     geofile.h \
     point.h \
     feature.h \
-    stylefile.h
+    stylefile.h \
+    style.h \
+    color.h
 
 FORMS += \
         widget.ui

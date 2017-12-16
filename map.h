@@ -3,6 +3,7 @@
 #include <vector>
 #include <QTextStream>
 #include "layer.h"
+#include "style.h"
 
 class Map
 {
@@ -12,6 +13,7 @@ public:
     int layerCount;
     Layer LAYER;
     void LoadMap(QTextStream *textStream);
+    void LoadStyle(QTextStream *textStream);
     std::vector<Layer> LAYERS;
 };
 

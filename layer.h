@@ -4,6 +4,7 @@
 #include <vector>
 #include <feature.h>
 #include <QTextStream>
+#include "style.h"
 
 class Layer
 {
@@ -13,7 +14,7 @@ public:
     QString layer_name;
     int target_count;
     void LoadLayer(QTextStream* textStream);
-    void DrawLayer();
+    Style layer_style;
 
     std::vector<Feature> features;
 };

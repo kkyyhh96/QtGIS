@@ -26,7 +26,3 @@ void Layer::LoadLayer(QTextStream *textStream){
         features.push_back(f);
     }
 }
-
-void Layer::DrawLayer(){
-
-}
