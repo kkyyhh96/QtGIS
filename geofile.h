@@ -12,7 +12,7 @@ class GeoFile
 {
 public:
     GeoFile();
-    Map *map;
+    Map map;
     Layer layer;
 
     void LoadFile(QString filePath);

@@ -25,6 +25,18 @@ Layer Map::LoadMap(QTextStream *textStream){
     c=line3.toDouble();
     this->layerCount=c;
 
+
+    for(int i=0;i<layerCount;i++){
+        Layer layer;
+        layer.LoadLayer(textStream);
+        LAYER=layer;
+        LAYERS.push_back(LAYER);
+        if(i==layerCount-1){
+        return layer;
+        }
+    }
+
+    /*
     Layer *layer;
     Layer lay;
     //for(int i=0;i<layerCount;i++){
@@ -36,4 +48,5 @@ Layer Map::LoadMap(QTextStream *textStream){
         //layers.push_back(l);
         return lay;
     }
+    */
 }

@@ -20,12 +20,10 @@ void Layer::LoadLayer(QTextStream *textStream){
     c=line3.toInt();
     target_count=c;
 
-    Feature *feature;
     for(int i=0;i<target_count;i++){
         Feature f;
-        feature=&f;
-        feature->LoadFeature(textStream);
-        this->features.push_back(*feature);
+        f.LoadFeature(textStream);
+        features.push_back(f);
     }
 }
 

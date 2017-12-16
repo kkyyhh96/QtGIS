@@ -14,15 +14,13 @@ int main(int argc, char *argv[])
     geoFile.LoadFile("/home/kyh/Documents/Qt/practise_3/utf8/china.dat");
 
 
-    /*
     // Map Show
     MyWidget myWidget;
     myWidget.map=geoFile.map;
-    myWidget.resize(1000,1000);
 
+    myWidget.resize(1000,1000);
     myWidget.paintGL();
     myWidget.show();
-    */
 
     return a.exec();
 }

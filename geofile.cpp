@@ -10,7 +10,8 @@ void GeoFile::LoadFile(QString filePath){
     file.open(QIODevice::ReadOnly);
     QTextStream textStream(&file);
 
-    layer=this->map->LoadMap(&textStream);
+    layer=map.LoadMap(&textStream);
+    //layer=this->map->LoadMap(&textStream);
     int a=5;
 
     file.close();
